@@ -7,10 +7,14 @@ using namespace std;
 int main()
 {
     elo elo1;
+//    fstream file;
     int i,k,a,b;
     float ra,rb,ea,eb;
     float game[6];
-ofstream outFile("file_in",ios::out);
+    float f[7];
+ifstream inFile("file_in",ios::in);
+ofstream outFile("file_out",ios::out);
+//while(file.getline(f)){//>>k>>a>>b>>game[6]){
     elo1.ea(1613,1609);
     elo1.eb(1613,1609);
  for(i=0;i<6;i++)
@@ -23,7 +27,8 @@ ofstream outFile("file_in",ios::out);
             int a=ra+0.5;
 	    int b=rb+0.5;
     //cout<<ra<<" "<<rb<<endl;
-            cout<<a<<" "<<b<<endl;
+            outFile<<a<<"\t"<<b<<endl;
+cout<<a<<" "<<b<<endl;
             elo1.ea(a,b);
             elo1.eb(a,b);
         }    
@@ -35,7 +40,8 @@ ofstream outFile("file_in",ios::out);
                 int a=ra+0.5;
 	        int b=rb+0.5;
     //cout<<ra<<" "<<rb<<endl;
-            cout<<a<<" "<<b<<endl;
+            outFile<<a<<"\t"<<b<<endl;
+cout<<a<<" "<<b<<endl;
             elo1.ea(a,b);
             elo1.eb(a,b);
         }
@@ -47,10 +53,12 @@ ofstream outFile("file_in",ios::out);
             int a=ra+0.5;
 	        int b=rb+0.5;
     //cout<<ra<<" "<<rb<<endl;
-            cout<<a<<" "<<b<<endl;
+            outFile<<a<<"\t"<<b<<endl;
+cout<<a<<" "<<b<<endl;
             elo1.ea(a,b);
             elo1.eb(a,b);
         }
     }
+//}
     return 0;
 }

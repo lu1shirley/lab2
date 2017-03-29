@@ -1,11 +1,11 @@
-#ifndef elo
-#define elo
+//#ifndef elo
+//#define elo
 #include <iostream>
 #include <unistd.h>
 //#include <string>
 #include <math.h>
 using namespace std;
-class elo {
+class elo{
 	public:
 	    elo();
 	    //elo(int,int,int);
@@ -22,4 +22,4 @@ class elo {
 		int a;
 		int b;
 };
-#endif 
+//#endif 
